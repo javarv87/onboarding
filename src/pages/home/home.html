@@ -1,14 +1,32 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
-
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content>
+  <ion-slides pager (ionSlideDidChange)="slideChanged()" (ionSlideDrag)="slideMoved()">
+    <ion-slide>
+      <div class="diag" style="background: url('assets/whitebg.svg') no-repeat;">
+        <ion-icon ios="ios-analytics" md="md-analitycs" color="primary" [@bounce]="state" (@bounce.done)="animationDone()"></ion-icon>
+      </div>
+      <div [@bounce]="state">
+        <h2>Track your routine</h2>
+        <p>Whether it's sets, reps, weight useed, you can track it all with out intuitive interface</p>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="diag" style="background: url('assets/whitebg.svg') no-repeat;">
+        <ion-icon ios="ios-trophy" md="md-trophy" color="primary" [@bounce]="state"></ion-icon>
+      </div>
+      <div [@bounce]="state">
+        <h2>Set personal goals</h2>
+        <p>We're all in the gym for a reason: goals. Set goals for diet and fitness</p>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="diag" style="background: url('assets/whitebg.svg') no-repeat;">
+        <ion-icon ios="ios-chatboxes" md="md-chatboxes" color="primary" [@bounce]="state"></ion-icon>
+      </div>
+      <div [@bounce]="state">
+        <h2>Chat with others</h2>
+        <p>Inspire and help each other reach fitness and diet goals</p>
+      </div>
+    </ion-slide>
+  </ion-slides>
+  <button (click)="skip()" id="skip">{{ skipMsg }}</button>
 </ion-content>
