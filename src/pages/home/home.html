@@ -1,7 +1,7 @@
 <ion-content>
   <ion-slides pager (ionSlideDidChange)="slideChanged()" (ionSlideDrag)="slideMoved()">
     <ion-slide>
-      <div class="diag" style="background: url('assets/whitebg.svg') no-repeat;">
+      <div class="diag" style="background: url('assets/whitebg.svg') no-repeat center center;">
         <ion-icon name="analytics" color="primary" [@bounce]="state" (@bounce.done)="animationDone()"></ion-icon>
       </div>
       <div [@bounce]="state">
@@ -10,7 +10,7 @@
       </div>
     </ion-slide>
     <ion-slide>
-      <div class="diag" style="background: url('assets/whitebg.svg') no-repeat;">
+      <div class="diag" style="background: url('assets/whitebg.svg') no-repeat center center;">
         <ion-icon name="trophy" color="primary" [@bounce]="state"></ion-icon>
       </div>
       <div [@bounce]="state">
@@ -19,7 +19,7 @@
       </div>
     </ion-slide>
     <ion-slide>
-      <div class="diag" style="background: url('assets/whitebg.svg') no-repeat;">
+      <div class="diag" style="background: url('assets/whitebg.svg') no-repeat center center;">
         <ion-icon name="chatboxes" color="primary" [@bounce]="state"></ion-icon>
       </div>
       <div [@bounce]="state">
